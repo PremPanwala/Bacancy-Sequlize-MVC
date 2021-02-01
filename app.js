@@ -1,11 +1,11 @@
 const express=require('express');
 const app=express();
 const sequelize=require('sequelize');
-const customer=require('./customer');
+const customer=require('./model/customer');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 //var router=express.Router();
-const crud=require('./crud')
+const crud=require('./controller/crud')
 app.use('/',crud);
 const connection=new sequelize('employeedb','root','prem0131',{
     dialect:'mysql'
