@@ -4,8 +4,7 @@ const sequelize=require('sequelize');
 const customer=require('./model/customer');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
-//var router=express.Router();
-const crud=require('./controller/crud')
+const crud=require('./routes/crud')
 app.use('/',crud);
 const connection=new sequelize('employeedb','root','prem0131',{
     dialect:'mysql'
